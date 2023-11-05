@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Your App</title>
+    <script src="./apip.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      /** @jsx apip.createElement */
+
+      function Header() {
+        return <header className="header">This is the header</header>;
+      }
+
+      function App() {
+        return (
+          <div>
+            <Header />
+            <main className="main-content">This is the main content</main>
+          </div>
+        );
+      }
+
+      apip.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
